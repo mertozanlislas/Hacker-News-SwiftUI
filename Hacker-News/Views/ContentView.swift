@@ -35,7 +35,7 @@ struct ContentView: View {
                         .cornerRadius(8)
                         .padding(.horizontal)
                 List(filteredPosts){post in
-                    NavigationLink( destination: DetailView(url: post.url)){
+                    NavigationLink( destination: DetailView(url: post.url, title: post.title)){
                         HStack{
                             Text(String(post.points))
                             Text(post.title)
